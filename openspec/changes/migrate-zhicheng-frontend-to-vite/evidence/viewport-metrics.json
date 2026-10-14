@@ -1,0 +1,168 @@
+{
+  "desktop": [
+    {
+      "route": "/",
+      "clientWidth": 1425,
+      "h1": "看清真实能力，找到更值得走的下一步。",
+      "scrollWidth": 1425,
+      "title": "知程 AI｜看清真实能力，找到更值得走的下一步"
+    },
+    {
+      "route": "/upload",
+      "clientWidth": 1425,
+      "h1": "先添加你的简历",
+      "scrollWidth": 1425,
+      "title": "上传简历 | 知程 AI"
+    },
+    {
+      "route": "/confirm",
+      "clientWidth": 1425,
+      "h1": "先确认事实，再开始分析",
+      "scrollWidth": 1425,
+      "title": "信息确认 | 知程 AI"
+    },
+    {
+      "route": "/review",
+      "clientWidth": 1440,
+      "h1": "简历初评",
+      "scrollWidth": 1440,
+      "title": "简历初评 | 知程 AI"
+    },
+    {
+      "route": "/role",
+      "clientWidth": 1425,
+      "h1": "你希望用什么岗位标准了解自己？",
+      "scrollWidth": 1425,
+      "title": "岗位与 JD | 知程 AI"
+    },
+    {
+      "route": "/assessment",
+      "clientWidth": 1440,
+      "h1": "技术问答：回答由你，判断由证据",
+      "scrollWidth": 1440,
+      "title": "知程 AI｜看清真实能力，找到更值得走的下一步"
+    },
+    {
+      "route": "/submission",
+      "clientWidth": 1425,
+      "h1": "技术结论需要人工复核",
+      "scrollWidth": 1425,
+      "title": "知程 AI｜看清真实能力，找到更值得走的下一步"
+    },
+    {
+      "route": "/report",
+      "clientWidth": 1425,
+      "h1": "报告示例",
+      "scrollWidth": 1425,
+      "title": "知程 AI｜看清真实能力，找到更值得走的下一步"
+    }
+  ],
+  "mobile": [
+    {
+      "route": "/",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/upload",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/confirm",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/review",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/role",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/assessment",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/submission",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    },
+    {
+      "route": "/report",
+      "clientWidth": 375,
+      "scrollWidth": 375
+    }
+  ],
+  "edges": [
+    {
+      "width": 1024,
+      "route": "/upload",
+      "clientWidth": 1009,
+      "mainWidth": 385,
+      "overflow": [],
+      "scrollWidth": 1009
+    },
+    {
+      "width": 1024,
+      "route": "/role",
+      "clientWidth": 1009,
+      "mainWidth": 385,
+      "overflow": [],
+      "scrollWidth": 1009
+    },
+    {
+      "width": 1024,
+      "route": "/assessment",
+      "clientWidth": 1009,
+      "mainWidth": 385,
+      "overflow": [],
+      "scrollWidth": 1009
+    },
+    {
+      "width": 1024,
+      "route": "/report",
+      "clientWidth": 1009,
+      "mainWidth": 385,
+      "overflow": [],
+      "scrollWidth": 1009
+    },
+    {
+      "width": 360,
+      "route": "/upload",
+      "clientWidth": 345,
+      "mainWidth": 313,
+      "overflow": [],
+      "scrollWidth": 345
+    },
+    {
+      "width": 360,
+      "route": "/role",
+      "clientWidth": 345,
+      "mainWidth": 313,
+      "overflow": [],
+      "scrollWidth": 345
+    },
+    {
+      "width": 360,
+      "route": "/assessment",
+      "clientWidth": 345,
+      "mainWidth": 313,
+      "overflow": [],
+      "scrollWidth": 345
+    },
+    {
+      "width": 360,
+      "route": "/report",
+      "clientWidth": 345,
+      "mainWidth": 313,
+      "overflow": [],
+      "scrollWidth": 345
+    }
+  ]
+}

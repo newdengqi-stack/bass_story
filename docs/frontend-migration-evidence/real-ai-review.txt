@@ -1,0 +1,126 @@
+- banner:
+  - link "知程 AI":
+    - /url: /
+    - generic: 知程 AI
+  - generic: AI 初评 · 内部验证
+  - link "退出体验":
+    - /url: /
+- navigation "诊断流程进度":
+  - paragraph:
+    - text: Your Journey
+    - generic: V0
+  - list:
+    - link "上传简历":
+      - /url: /upload
+      - text: 上传简历
+    - link "信息确认":
+      - /url: /confirm
+      - text: 信息确认
+    - link "3 简历初评":
+      - /url: /review
+      - generic: "3"
+      - text: 简历初评
+    - generic: "4"
+    - generic: 岗位与 JD
+    - generic: "5"
+    - generic: 技术问答
+    - generic: "6"
+    - generic: 人工复核
+    - generic: "7"
+    - generic: 报告
+- main:
+  - paragraph: 03 / 07 · Resume Review
+  - heading "简历初评" [level=1]
+  - paragraph: 以下是即时的简历文字反馈，尚未进行任何技术能力验证。技术能力需要通过后续的问答环节来评估。
+  - generic: 仅基于文本与可靠提取的版式证据
+  - status: AI 文字初评 · 已调用国内模型。仅依据未经独立核实的简历自述；不代表技能认证或正式技术报告，疑点与缺失事实待本人确认。
+  - generic: 最值得先处理的问题
+  - list:
+    - listitem: · 缺少实习/工作经历、项目时间、联系方式等基本信息
+    - listitem: · 项目描述只有名称、技术栈和团队人数，缺少背景、目标与本人具体贡献
+    - listitem: · “负责接口测试和部分页面开发”表述笼统，未说明接口对象与验证过程
+  - generic: 待本人确认的资料
+  - list:
+    - listitem: · 是否有实习或工作经历及其时间
+    - listitem: · 项目起止时间
+    - listitem: · 可公开的联系方式
+    - listitem: · 项目背景与目标
+    - listitem: · 本人负责的具体模块范围
+    - listitem: · 项目最终交付物或可展示成果
+    - listitem: · 所测接口的功能范围与数量
+    - listitem: · 测试用例设计与执行方式
+    - listitem: · 页面开发的具体功能点
+    - listitem: · Python 的具体使用场景与产出
+    - listitem: · Git 的协作或版本管理使用情况
+    - listitem: · Linux 的实际使用场景
+    - listitem: · 本人希望从事的岗位方向
+    - listitem: · 个人技术兴趣与优势的真实描述
+    - listitem: · 预计毕业时间
+    - listitem: · 相关课程或学业成果
+    - listitem: · 本人在团队中的具体分工
+    - listitem: · 与团队成员的协作方式
+  - generic: 六维文字初评
+  - generic: 仅讨论文字表达，无综合分、技能等级或录用概率。点击各维度查看原因、原文和修改方向。
+  - region:
+    - heading "信息与结构完整性 建议优化" [level=3]:
+      - button "信息与结构完整性 建议优化":
+        - generic: 信息与结构完整性
+        - generic: 建议优化
+    - heading "排版与可读性 无法判断" [level=3]:
+      - button "排版与可读性 无法判断":
+        - generic: 排版与可读性
+        - generic: 无法判断
+    - heading "个人介绍 建议优化" [level=3]:
+      - button "个人介绍 建议优化":
+        - generic: 个人介绍
+        - generic: 建议优化
+    - heading "项目表达 建议优化" [level=3]:
+      - button "项目表达 建议优化" [expanded] [active]:
+        - generic: 项目表达
+        - generic: 建议优化
+    - region:
+      - paragraph: 项目仅说明名称、技术栈和团队人数，未交代项目背景、目标、本人承担模块、技术难点与最终结果；对“接口测试和部分页面开发”的表述停留在职责层面，缺少过程与产出。
+      - blockquote:
+        - paragraph:
+          - text: 原文依据 · 第 2 行（联系方式已去敏）
+        - paragraph: 项目经历：参与 Python 课程管理工具开发，团队3人。
+      - blockquote:
+        - paragraph:
+          - text: 原文依据 · 第 3 行（联系方式已去敏）
+        - paragraph: 本人工作：负责接口测试和部分页面开发，没有说明具体接口和验证过程。
+      - article:
+        - heading "项目描述只有名称、技术栈和团队人数，缺少背景、目标与本人具体贡献" [level=3]
+        - generic: 待确认 · 非技术认证
+        - paragraph: 原因：“参与 Python 课程管理工具开发，团队3人”仅说明参与事实，未交代项目要解决的问题、本人负责的模块边界和最终交付结果，读者无法判断实际投入与产出。
+        - blockquote:
+          - paragraph:
+            - text: 原文依据 · 第 2 行（联系方式已去敏）
+          - paragraph: 项目经历：参与 Python 课程管理工具开发，团队3人。
+        - paragraph: 修改方向：补充项目背景（解决什么问题）、本人负责的具体模块、采用的方法和可确认的产出；所有内容须以本人真实经历为准，不夸大角色，不补造数据。
+        - paragraph: 待核对：项目背景与目标；本人负责的具体模块范围；项目最终交付物或可展示成果
+      - article:
+        - heading "“负责接口测试和部分页面开发”表述笼统，未说明接口对象与验证过程" [level=3]
+        - generic: 待确认 · 非技术认证
+        - paragraph: 原因：该句只给出职责标签，没有说明测试了哪些接口、如何设计用例、发现了什么问题，也没有说明页面开发的具体功能，属于职责罗列而非成果表达。
+        - blockquote:
+          - paragraph:
+            - text: 原文依据 · 第 3 行（联系方式已去敏）
+          - paragraph: 本人工作：负责接口测试和部分页面开发，没有说明具体接口和验证过程。
+        - paragraph: 修改方向：在真实前提下，写明所测接口的功能范围、测试方法（如用例设计、工具使用）和可确认的发现或改进；页面开发部分写明实现的功能点与验证方式。若细节已遗忘，可只保留能确认的部分。
+        - paragraph: 待核对：所测接口的功能范围与数量；测试用例设计与执行方式；页面开发的具体功能点
+    - heading "技术证据表达 建议优化" [level=3]:
+      - button "技术证据表达 建议优化":
+        - generic: 技术证据表达
+        - generic: 建议优化
+    - heading "岗位针对性 暂不适用" [level=3]:
+      - button "岗位针对性 暂不适用":
+        - generic: 岗位针对性
+        - generic: 暂不适用
+  - paragraph: 实际模型：deepseek / deepseek-flash · 请求 d903c153-4452-4c48-a512-40a841401fe0
+  - button "返回修改文本并重新分析"
+  - region "会话与个人资料":
+    - paragraph: 本轮后端不持久化简历和初评。清空页面不会删除模型供应商可能保留的记录。
+    - button "清空并重新开始"
+- paragraph: 你的真实能力，需要真实证据。
+- paragraph: 只对已验证范围作判断；技术结论须经人工复核。
+- region "Notifications alt+T"

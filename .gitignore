@@ -14,6 +14,7 @@ Thumbs.db
 # --- 工具产物（本地、不入库） ---
 .ua/
 .understand-anything/
+.codegraph/
 .corepack/
 .pnpm-store/
 node_modules/
@@ -30,3 +31,11 @@ out/
 *.db
 *.sqlite
 *.sqlite3
+
+# Backend virtual environments and private configuration
+.venv-backend/
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example

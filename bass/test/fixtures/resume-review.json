@@ -1,0 +1,118 @@
+{
+  "request_id": "b4d5ebc8-10ea-45f3-88cb-f06d7a6f429f",
+  "analysis_mode": "mock",
+  "result_type": "resume_initial_review",
+  "notice": "MOCK · 后端规则演示，未调用真实模型。仅依据未经独立核实的简历自述；不代表技能认证或正式技术报告，疑点与缺失事实待本人确认。",
+  "dimensions": [
+    {
+      "dimension": "completeness",
+      "status": "needs_improvement",
+      "evidence_refs": [
+        "s1"
+      ],
+      "explanation": "Mock 规则演示，不是 AI 判断；需本人核对相关材料。",
+      "title": "信息与结构完整性"
+    },
+    {
+      "dimension": "layout_readability",
+      "status": "unknown",
+      "evidence_refs": [],
+      "explanation": "只有纯文本，没有可观察的页面版式证据，无法判断排版质量。",
+      "title": "排版与可读性"
+    },
+    {
+      "dimension": "self_intro",
+      "status": "unknown",
+      "evidence_refs": [],
+      "explanation": "Mock 规则演示，不是 AI 判断；需本人核对相关材料。",
+      "title": "个人介绍"
+    },
+    {
+      "dimension": "project_expression",
+      "status": "needs_improvement",
+      "evidence_refs": [
+        "s1"
+      ],
+      "explanation": "Mock 规则演示，不是 AI 判断；需本人核对相关材料。",
+      "title": "项目表达"
+    },
+    {
+      "dimension": "evidence_expression",
+      "status": "needs_improvement",
+      "evidence_refs": [
+        "s1"
+      ],
+      "explanation": "Mock 规则演示，不是 AI 判断；需本人核对相关材料。",
+      "title": "技术证据表达"
+    },
+    {
+      "dimension": "role_relevance",
+      "status": "not_applicable",
+      "evidence_refs": [],
+      "explanation": "未确认目标岗位，本项暂不适用。",
+      "title": "岗位针对性"
+    }
+  ],
+  "findings": [
+    {
+      "dimension": "completeness",
+      "issue": "请核对经历的时间与职责信息",
+      "reason": "仅有自述文本，需由本人核对教育和经历的时间、职责是否足够明确。",
+      "action": "检查每段经历的起止时间和本人任务；只补充真实可核对的信息。",
+      "source_span_ids": [
+        "s1"
+      ],
+      "missing_facts": [
+        "待本人核对经历时间与职责"
+      ],
+      "finding_id": "a80c6c67-08a4-49ae-abc1-760a20d8e4dc",
+      "confirmation_state": "pending_confirmation"
+    },
+    {
+      "dimension": "project_expression",
+      "issue": "项目整体与本人任务需要分开确认",
+      "reason": "项目描述本身不能证明每项任务均由本人完成。",
+      "action": "补充本人实际承担的模块、一次真实排查过程及验证方式；无法确认的内容保留待确认。",
+      "source_span_ids": [
+        "s1"
+      ],
+      "missing_facts": [
+        "本人实际负责的任务",
+        "真实验证方式"
+      ],
+      "finding_id": "9c4ca137-4d81-4c5a-adef-940622d948d6",
+      "confirmation_state": "pending_confirmation"
+    },
+    {
+      "dimension": "evidence_expression",
+      "issue": "技术熟悉程度仍属于自述",
+      "reason": "熟悉或精通等措辞本身不构成独立技术验证。",
+      "action": "在确有经历时补充使用该技术的具体任务、操作过程或可追溯材料，不编造数据。",
+      "source_span_ids": [
+        "s1"
+      ],
+      "missing_facts": [
+        "技术声明对应的实际使用材料"
+      ],
+      "finding_id": "38e8f4a3-d2c1-443d-a626-16128dd3cecd",
+      "confirmation_state": "pending_confirmation"
+    }
+  ],
+  "sources": [
+    {
+      "span_id": "s1",
+      "line": 1,
+      "quote": "教育背景：计算机专业，大三在读。项目经历：参与课程工具开发，负责测试。技能：熟悉 Python 和 Git。"
+    }
+  ],
+  "metadata": {
+    "provider": "mock",
+    "model": "rule-demo-v1",
+    "prompt_version": "resume-review-1",
+    "schema_version": "resume-review-1",
+    "policy_version": "text-initial-review-1",
+    "input_tokens": null,
+    "output_tokens": null,
+    "elapsed_ms": 0
+  }
+}

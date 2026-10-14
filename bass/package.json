@@ -1,0 +1,51 @@
+{
+  "name": "zhicheng-ai",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "npm@11.19.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@base-ui/react": "1.5.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "1.17.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "sonner": "2.0.8",
+    "tailwind-merge": "3.4.0",
+    "tw-animate-css": "^1.4.0",
+    "react-router-dom": "7.18.4",
+    "@fontsource/inter": "5.3.0",
+    "@fontsource/jetbrains-mono": "5.3.0",
+    "@fontsource-variable/noto-sans-sc": "5.3.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8.5",
+    "tailwindcss": "^4.3.3",
+    "typescript": "5.7.3",
+    "vitest": "5.0.4",
+    "@testing-library/react": "16.3.3",
+    "@testing-library/dom": "10.4.1",
+    "@testing-library/jest-dom": "6.9.1",
+    "jsdom": "30.1.2",
+    "vite": "8.3.4",
+    "@vitejs/plugin-react": "5.2.0",
+    "eslint": "10.12.0",
+    "@eslint/js": "10.0.1",
+    "typescript-eslint": "8.71.2",
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.4.0"
+  },
+  "type": "module"
+}
