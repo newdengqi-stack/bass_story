@@ -1,0 +1,7 @@
+{
+  "name": "@zhitu/config",
+  "version": "0.1.0",
+  "private": true,
+  "description": "证途共享配置 —— TS 基线。后续 lint / tailwind preset 也放这里",
+  "files": ["tsconfig.base.json"]
+}

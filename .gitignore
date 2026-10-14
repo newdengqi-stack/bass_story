@@ -14,11 +14,19 @@ Thumbs.db
 # --- 工具产物（本地、不入库） ---
 .ua/
 .understand-anything/
+.corepack/
+.pnpm-store/
 node_modules/
 dist/
 build/
 
-# 大文件/数据库
+# --- 构建产物 ---
+.next/
+out/
+*.tsbuildinfo
+
+# --- 大文件 / 本地备份 ---
+*.zip
 *.db
 *.sqlite
 *.sqlite3

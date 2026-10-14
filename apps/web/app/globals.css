@@ -1,0 +1,708 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Noto Sans SC', system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', 'SimSun', Georgia, serif;
+  --font-display: var(--font-instrument), 'Noto Serif SC', 'Songti SC', serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, 'SFMono-Regular', monospace;
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  color-scheme: dark;
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.205 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.205 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.922 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.704 0.191 22.216);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.556 0 0);
+  --chart-1: oklch(0.87 0 0);
+  --chart-2: oklch(0.556 0 0);
+  --chart-3: oklch(0.439 0 0);
+  --chart-4: oklch(0.371 0 0);
+  --chart-5: oklch(0.269 0 0);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.556 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    color-scheme: dark;
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: oklch(0.922 0 0);
+    --primary-foreground: oklch(0.205 0 0);
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.704 0.191 22.216);
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: oklch(0.556 0 0);
+    --chart-1: oklch(0.87 0 0);
+    --chart-2: oklch(0.556 0 0);
+    --chart-3: oklch(0.439 0 0);
+    --chart-4: oklch(0.371 0 0);
+    --chart-5: oklch(0.269 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+  }
+}
+
+/* 整站恒为深色（照片底 + 浅色文字）。
+   必须写在 @layer 之外 —— 层叠规则里无层级样式恒优先于有层级样式，
+   而 shadcn 脚手架在上面的 :root 里写了 color-scheme: light，放层里会被它盖掉。 */
+:root {
+  color-scheme: dark;
+  background-color: #2a2140;
+
+  /* 原本由 next/font/google 注入到 <html> 的 class 上，现改为运行时 <link> + 在此定义。
+     见 app/layout.tsx 顶部说明。 */
+  --font-instrument: 'Instrument Serif', Georgia, 'Songti SC', serif;
+  --font-jetbrains: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', monospace;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  /* 横向溢出防护。不能用 overflow-x: clip —— Chromium 有已知 bug，
+     html/body 设为 clip 会让 position: fixed 元素按整个文档高度（而非视口）计算尺寸，
+     导致全屏固定背景被拉伸变形。改用 hidden，效果相同且不触发该 bug。 */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* ⚠️ body 上绝对不能设背景色。
+     页面的背景图是 body 里一个 z-index: -10 的 fixed 元素。按 CSS 绘制顺序，
+     「元素自身的背景」画在「其负 z-index 后代」之上 —— 一旦 body 有了背景色，
+     它就会把那张背景图整块盖住（表现为「图像背景没了」）。
+     底色统一交给 html（见上面的 :root），它会作为 canvas 背景画在最底层。 */
+  body {
+    color: var(--ws-ink, #fbf9f6);
+  }
+}
+
+@keyframes char-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.5em) rotate(2deg);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-char {
+  display: inline-block;
+  opacity: 0;
+  animation: char-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-fade-up {
+  opacity: 0;
+  animation: fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes reveal-left {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes reveal-right {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-reveal-left {
+  opacity: 0;
+  animation: reveal-left 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-reveal-right {
+  opacity: 0;
+  animation: reveal-right 0.5s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 细滚动条：用于侧栏/面板内部独立滚动区域，保持视觉克制 */
+.ws-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ws-line) transparent;
+}
+.ws-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.ws-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.ws-scroll::-webkit-scrollbar-thumb {
+  background-color: var(--ws-line);
+  border-radius: 9999px;
+}
+.ws-scroll::-webkit-scrollbar-thumb:hover {
+  background-color: var(--ws-muted);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  filter: blur(6px);
+  transition:
+    opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal[data-visible='true'] {
+  opacity: 1;
+  transform: none;
+  filter: none;
+}
+
+.glass {
+  background: rgb(255 255 255 / 0.12);
+  border: 1px solid rgb(255 255 255 / 0.28);
+  backdrop-filter: blur(18px) saturate(140%);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+}
+
+/* ============ 应用内页面 · 内容直接落在照片上（无遮罩）============ */
+/* 没有卡片、没有面板、没有任何整页遮罩：照片原样呈现，不被蒙灰也不被压暗。
+   可读性完全由「文字本身的投影」保证 —— 投影只作用于字，不动图片。 */
+.ws {
+  --ws-ink: #fff;
+  --ws-ink-2: #f5f3f0;
+  --ws-muted: #d4ccc2;
+  --ws-line: rgb(255 255 255 / 0.3);
+  --ws-line-2: rgb(255 255 255 / 0.45);
+  --ws-sand: #f0d9ba;
+  --ws-sand-soft: rgb(240 217 186 / 0.25);
+  --ws-sand-fill: #f0d9ba;                               /* 按钮填充，配深紫字 */
+
+  /* 幽灵控件：极淡的白，只在悬停时加深 */
+  --ws-ghost: rgb(255 255 255 / 0.12);
+  --ws-ghost-hover: rgb(255 255 255 / 0.24);
+  --ws-ghost-line: rgb(255 255 255 / 0.3);
+  --ws-ghost-line-strong: rgb(255 255 255 / 0.42);
+
+  /* 表单字段底：比幽灵控件略淡，保证输入文字仍压在照片上 */
+  --ws-field: rgb(255 255 255 / 0.06);
+
+  /* 浮层背板 —— 来源浮层与确认框需要足够不透明才读得清，
+     但只覆盖弹层本身，不是整页遮罩，照片在弹层之外照旧完整可见 */
+  --ws-panel: rgb(18 14 26 / 0.85);
+
+  /* 沙金填充之上的文字色 */
+  --ws-on-sand: #2a2140;
+
+  --ws-ok: #86efac;
+  --ws-info: #93c5fd;
+  --ws-warn: #fcd34d;
+  --ws-miss: #fda4af;
+  --ws-miss-soft: rgb(253 164 175 / 0.12);
+
+  color: var(--ws-ink);
+  font-family: var(--font-sans);
+  /* 双层投影：近处一层压边角，远处一层拉开层次。只影响文字，不影响照片 */
+  text-shadow: 0 1px 3px rgb(12 9 20 / 0.75), 0 2px 16px rgb(12 9 20 / 0.45);
+}
+
+/* 幽灵描边盒 —— 只在需要圈定范围时用，背景几乎透明 */
+.ws-ghost-box {
+  border: 1px solid var(--ws-ghost-line);
+  border-radius: 1rem;
+  background: rgb(255 255 255 / 0.05);
+}
+
+/* 幽灵胶囊（按钮 / 标签） */
+.ws-pill {
+  border: 1px solid var(--ws-ghost-line);
+  border-radius: 999px;
+  background: var(--ws-ghost);
+  transition: background-color 160ms ease, border-color 160ms ease;
+}
+.ws-pill:hover {
+  background: var(--ws-ghost-hover);
+  border-color: rgb(255 255 255 / 0.42);
+}
+
+/* 引导高亮 —— 深色底上用沙金光圈 */
+.tour-target {
+  outline: 2px solid var(--ws-sand, #e9c9a8);
+  outline-offset: 8px;
+  border-radius: 12px;
+  animation: tour-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes tour-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 8px rgb(233 201 168 / 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 16px rgb(233 201 168 / 0.45);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tour-target {
+    animation: none;
+    box-shadow: 0 0 0 12px rgb(233 201 168 / 0.35);
+  }
+}
+
+/* ============ 主动动效（不依赖用户输入的 ambient motion） ============ */
+/* SVG 内部元素的动画基准：以自身中心为原点 */
+.svg-anim {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.72; }
+}
+
+@keyframes ring-pulse {
+  0% { transform: scale(0.92); opacity: 0.9; }
+  70% { transform: scale(1.08); opacity: 0.25; }
+  100% { transform: scale(1.08); opacity: 0; }
+}
+
+@keyframes spin-slow {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes wave-flow {
+  to { stroke-dashoffset: -160; }
+}
+
+@keyframes scan-x {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(72px); }
+}
+
+@keyframes dot-hop {
+  0%, 100% { transform: translateY(0); opacity: 0.9; }
+  50% { transform: translateY(-5px); opacity: 1; }
+}
+
+@keyframes draw-check {
+  to { stroke-dashoffset: 0; }
+}
+
+.animate-breathe { animation: breathe 2.6s ease-in-out infinite; }
+.animate-ring-pulse { animation: ring-pulse 2.8s ease-out infinite; }
+.animate-spin-slow { animation: spin-slow 14s linear infinite; }
+.animate-wave-flow { animation: wave-flow 2.4s linear infinite; }
+.animate-scan-x { animation: scan-x 3s ease-in-out infinite; }
+.animate-dot-hop { animation: dot-hop 1.8s ease-in-out infinite; }
+.animate-draw-check {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-check 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.4s forwards;
+}
+
+/* ============ 字体：展示标题 ============ */
+.font-display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-feature-settings: 'palt' 1;
+}
+.font-display-latin {
+  font-family: var(--font-instrument), Georgia, serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* ============ 动态标题 KineticTitle ============ */
+.kinetic-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.1rem;
+  opacity: 0;
+  animation: fade-up 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.kinetic-eyebrow-rule {
+  display: inline-block;
+  height: 1px;
+  width: 0;
+  background: var(--ws-sand);
+  animation: rule-grow 1.2s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+@keyframes rule-grow {
+  to { width: 2.75rem; }
+}
+
+.kinetic-title {
+  perspective: 900px;
+}
+.kinetic-char {
+  display: inline-block;
+  opacity: 0;
+  transform-origin: 50% 100%;
+  animation: glyph-in 1.1s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0s) forwards;
+}
+@keyframes glyph-in {
+  0% {
+    opacity: 0;
+    transform: translateY(0.65em) rotateX(-75deg) scale(0.92);
+    filter: blur(10px);
+  }
+  60% { filter: blur(0); }
+  100% {
+    opacity: 1;
+    transform: none;
+    filter: blur(0);
+  }
+}
+.kinetic-glyph {
+  display: inline-block;
+  --lift: 0em;
+  --tilt: 0deg;
+  --heat: 0;
+  transform: translateY(var(--lift)) rotate(var(--tilt));
+  color: color-mix(in oklab, currentColor calc((1 - var(--heat)) * 100%), var(--ws-sand, #e9c9a8));
+  transition:
+    transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+    color 0.5s ease;
+  animation: glyph-float 6s ease-in-out calc(var(--i, 0) * -0.45s) infinite;
+}
+@keyframes glyph-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -0.045em; }
+}
+
+/* ============ 背景：主动的环境光 ============ */
+@keyframes light-drift {
+  0% { transform: translate3d(-30%, -10%, 0) rotate(0deg); }
+  50% { transform: translate3d(25%, 8%, 0) rotate(8deg); }
+  100% { transform: translate3d(-30%, -10%, 0) rotate(0deg); }
+}
+.ambient-light {
+  position: absolute;
+  inset: -30%;
+  background:
+    radial-gradient(40% 35% at 30% 30%, rgb(255 214 170 / 0.35), transparent 70%),
+    radial-gradient(35% 30% at 70% 60%, rgb(186 160 255 / 0.22), transparent 70%);
+  mix-blend-mode: soft-light;
+  animation: light-drift 26s ease-in-out infinite;
+  pointer-events: none;
+}
+.film-grain {
+  position: absolute;
+  inset: 0;
+  opacity: 0.12;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+@keyframes scene-in {
+  from { opacity: 0; transform: scale(1.06); filter: blur(10px) saturate(0.7); }
+  to { opacity: 1; transform: scale(1); filter: none; }
+}
+.scene-in {
+  /* 背景图每次都随页面重新挂载，所以这个时长就是「每次跳转的画面过渡时长」。
+     原本 1.6s 会让每次点击都像在等背景加载，收到 0.7s。
+     它是在 bg-[#2a2140] 深紫底上做的淡入，不经过白色，所以不会白闪。 */
+  animation: scene-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ============ 路由切换 ============ */
+/* 这里**刻意不做整页入场动画**。
+   app/template.tsx 包住的是整页，包括那个 position: fixed 的全屏背景，
+   所以容器级的入场动画只有两种走法，都不行：
+     · 动 opacity —— 整页（含背景）先透明，露出根底色，看起来就是「跳转白闪一下」
+     · 动 transform / filter —— 会为 fixed 后代建立包含块，背景被拖成随页面滚动并错位
+   页面的入场感由各页自己的 .scene-in（背景淡入，在深紫底上做，不闪）
+   与内容区的 .reveal 负责，不依赖这一层。 */
+.page-in {
+  /* 保留类名作为将来的接缝（例如改用 View Transitions API），当前无动画 */
+}
+
+/* ============ 正文容器：确保文字对比度，不依赖背景明暗 ============ */
+.ws-glass-card {
+  background: var(--ws-panel);
+  border: 1px solid var(--ws-line);
+  backdrop-filter: blur(28px) saturate(140%);
+  -webkit-backdrop-filter: blur(28px) saturate(140%);
+  box-shadow: 0 24px 60px -24px rgb(5 3 10 / 0.5), inset 0 1px 0 rgb(255 255 255 / 0.06);
+}
+
+/* ============ 浮动导航 ============ */
+.nav-glass {
+  background: rgb(20 15 30 / 0.22);
+  border: 1px solid rgb(255 255 255 / 0.16);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  box-shadow: 0 10px 40px -12px rgb(10 6 20 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.12);
+}
+
+/* ============ 拷打模式：翻页式问题切换 ============ */
+.interrogate-stage {
+  perspective: 1600px;
+}
+.interrogate-card {
+  transform-style: preserve-3d;
+}
+@keyframes interrogate-flip-out {
+  to {
+    transform: rotateY(-90deg) translateZ(40px);
+    opacity: 0;
+  }
+}
+@keyframes interrogate-flip-in {
+  from {
+    transform: rotateY(90deg) translateZ(40px);
+    opacity: 0;
+  }
+  to {
+    transform: rotateY(0deg) translateZ(0);
+    opacity: 1;
+  }
+}
+.interrogate-flip-out {
+  animation: interrogate-flip-out 0.32s cubic-bezier(0.4, 0, 1, 1) forwards;
+}
+.interrogate-flip-in {
+  animation: interrogate-flip-in 0.4s cubic-bezier(0, 0, 0.2, 1) forwards;
+}
+
+@keyframes interrogate-pulse-dot {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgb(253 100 100 / 0.5); }
+  50% { opacity: 0.4; box-shadow: 0 0 0 6px rgb(253 100 100 / 0); }
+}
+.interrogate-rec-dot {
+  animation: interrogate-pulse-dot 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .interrogate-flip-out,
+  .interrogate-flip-in,
+  .interrogate-rec-dot {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 跑马灯 */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .kinetic-char,
+  .kinetic-eyebrow,
+  .page-in,
+  .scene-in {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+  .kinetic-glyph,
+  .ambient-light,
+  .animate-marquee {
+    animation: none;
+  }
+  .kinetic-eyebrow-rule {
+    animation: none;
+    width: 2.75rem;
+  }
+  .page-curtain {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-char,
+  .animate-fade-up,
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+  .animate-breathe,
+  .animate-ring-pulse,
+  .animate-spin-slow,
+  .animate-wave-flow,
+  .animate-scan-x,
+  .animate-dot-hop,
+  .animate-draw-check {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .animate-draw-check { stroke-dashoffset: 0; }
+}
+
+/* Star expansion map motion */
+.sem-orbit {
+  transform-origin: 50px 50px;
+  animation: sem-spin linear infinite;
+}
+.sem-flow {
+  animation: sem-flow 2.8s linear infinite;
+}
+.sem-ripple {
+  transform-origin: 50px 50px;
+  transform-box: view-box;
+  animation: sem-ripple 3.2s ease-out infinite;
+}
+@keyframes sem-spin {
+  to { transform: rotate(360deg); }
+}
+@keyframes sem-flow {
+  from { stroke-dashoffset: 2; }
+  to { stroke-dashoffset: -40; }
+}
+@keyframes sem-ripple {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sem-orbit, .sem-flow, .sem-ripple { animation: none; }
+}

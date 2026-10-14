@@ -1,0 +1,13 @@
+{
+  "name": "zhitu",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "description": "证途 —— 证据化求职准备平台",
+  "scripts": {
+    "dev": "pnpm --filter @zhitu/web dev",
+    "build": "pnpm --filter @zhitu/web build",
+    "start": "pnpm --filter @zhitu/web start",
+    "typecheck": "pnpm -r typecheck"
+  }
+}
