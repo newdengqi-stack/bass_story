@@ -1,4 +1,0 @@
-{
-  "extends": "@zhitu/config/tsconfig.base.json",
-  "include": ["src/**/*.ts"]
-}
